@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleDiceRoll.MainPage">
+
+    <Grid Margin="20, 50, 20, 10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0"
+               Text="Number of die sides"
+               FontAttributes="Bold"
+               />
+        <Entry Grid.Row="0" Grid.Column="1" x:Name="SidesEntry"/>
+
+        <!--<Label Grid.Row="0" Grid.Column="1" Text="{Binding Value}"
+               BindingContext="{x:Reference Name=SidesSlider}"></Label>
+        <Slider Grid.Row="1" x:Name="SidesSlider" Grid.ColumnSpan="2"
+                Minimum="0" Maximum="20"
+                Value="0"></Slider>-->
+
+        <Label Grid.Row="1" Grid.Column="0"
+               Text="Number of die rolls"
+               
+               />
+        <Entry Grid.Row="1" Grid.Column="1" x:Name="RollsEntry"></Entry>
+
+        <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+                BackgroundColor="Green"
+                TextColor="White"
+                Text="Roll"
+                Clicked="RollDiceButton"
+                />
+
+        <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+               Text="Results"
+               FontSize="Large"
+               HorizontalOptions="CenterAndExpand"
+               HorizontalTextAlignment="Center"
+               VerticalOptions="CenterAndExpand"
+               VerticalTextAlignment="Center"
+               FontAttributes="Bold"               
+               
+               />
+
+    </Grid>
+
+</ContentPage>
