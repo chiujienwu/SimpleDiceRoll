@@ -12,6 +12,8 @@ namespace SimpleDiceRoll
     public partial class MainPage : ContentPage
     {
         //List<Die> results = new List<Die>();
+        public Die SixSidedDie { get; set; }
+
         public MainPage()
         {
             InitializeComponent();
@@ -19,14 +21,14 @@ namespace SimpleDiceRoll
             //binding by code
 
             //source object (1) and could be loaded from service call or a database call
-            Die die = new Die
+            SixSidedDie = new Die
             {
                 Sides = 6,
                 Rolls = 3
             };
 
             //gives the named Grid in the Xaml parent to the Entries a binding context
-            MainGrid.BindingContext = die;
+            this.BindingContext = SixSidedDie;
 
 /*            Binding dieSidesBinding = new Binding();
             dieSidesBinding.Source = die;
