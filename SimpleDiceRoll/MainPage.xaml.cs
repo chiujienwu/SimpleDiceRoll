@@ -16,16 +16,19 @@ namespace SimpleDiceRoll
         {
             InitializeComponent();
 
-/*            //binding by code
+            //binding by code
 
-            //source object (1) and could be loaded from  serivce
+            //source object (1) and could be loaded from service call or a database call
             Die die = new Die
             {
                 Sides = 6,
                 Rolls = 3
             };
 
-            Binding dieSidesBinding = new Binding();
+            //gives the named Grid in the Xaml parent to the Entries a binding context
+            MainGrid.BindingContext = die;
+
+/*            Binding dieSidesBinding = new Binding();
             dieSidesBinding.Source = die;
             dieSidesBinding.Path = "Sides";  //source object property (2)
             SidesEntry.SetBinding(Entry.TextProperty, dieSidesBinding);  //target is specified by name SidesEntry (3) and the property is the Entry's TextProperty (4)

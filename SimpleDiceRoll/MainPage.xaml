@@ -4,13 +4,13 @@
              xmlns:local="clr-namespace:SimpleDiceRoll"
              xmlns:model="clr-namespace:SimpleDiceRoll.Model"
              x:Class="SimpleDiceRoll.MainPage">
-    <ContentPage.Resources>
+    <!--<ContentPage.Resources>
         <ResourceDictionary>
             <model:Die Sides="6" Rolls="3" x:Key="SixSidedDie"></model:Die>
         </ResourceDictionary>
-    </ContentPage.Resources>
+    </ContentPage.Resources>-->
 
-    <Grid Margin="20, 50, 20, 10">
+    <Grid Margin="20, 50, 20, 10" x:Name="MainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
@@ -30,7 +30,7 @@
 
         <!--entry #1 -->
         <Entry Grid.Row="0" Grid.Column="1" x:Name="SidesEntry"
-               Text="{Binding Sides, Source={StaticResource SixSidedDie}}"
+               Text="{Binding Sides}"
                />
 
         <!--<Label Grid.Row="0" Grid.Column="1" Text="{Binding Value}"
@@ -47,7 +47,7 @@
 
         <!--label #2 -->
         <Entry Grid.Row="1" Grid.Column="1" x:Name="RollsEntry"
-               Text="{Binding Rolls, Source={StaticResource SixSidedDie}}"
+               Text="{Binding Rolls}"
                />
 
         <!--button -->
