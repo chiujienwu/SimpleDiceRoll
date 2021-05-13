@@ -11,16 +11,21 @@ namespace SimpleDiceRoll
 {
     public partial class MainPage : ContentPage
     {
-        List<Die> results = new List<Die>();
+        //List<Die> results = new List<Die>();
         public MainPage()
         {
             InitializeComponent();
 
             // binding by code or by xaml
 
-            // binding by code in the code behind is demonstrated below
+            Die die = new Die
+            {
+                Sides = 6,
+                Rolls = 3
+            }
+                ;  // source object (1) and could be loaded from  serivce
 
-            Die die = new Die();  // source object (1) and could be loaded from  serivce
+/*            // binding by code in the code behind is demonstrated below
 
             Entry dieSidesEntry = new Entry();  // target object (3), the entry
             
@@ -37,7 +42,7 @@ namespace SimpleDiceRoll
 
             // TODO:  NEED METHOD FOR CREATING ROLL RESULTS AND BIND TO VIEW THE RESULTS OF ROLLS
 
-            DisplayAlert("Binding Set", "Die sides = " + die.Sides + ", Num of rolls = " + die.Rolls, "OK");
+            DisplayAlert("Binding Set", "Die sides = " + die.Sides + ", Num of rolls = " + die.Rolls, "OK");*/
 
         }
 

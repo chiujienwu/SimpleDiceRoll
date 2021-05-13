@@ -15,10 +15,13 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
+        <!--label #1 -->
         <Label Grid.Row="0" Grid.Column="0"
                Text="Number of die sides"
                FontAttributes="Bold"
                />
+
+        <!--entry #1 -->
         <Entry Grid.Row="0" Grid.Column="1" x:Name="SidesEntry"/>
 
         <!--<Label Grid.Row="0" Grid.Column="1" Text="{Binding Value}"
@@ -27,19 +30,23 @@
                 Minimum="0" Maximum="20"
                 Value="0"></Slider>-->
 
+        <!--label #2 -->
         <Label Grid.Row="1" Grid.Column="0"
                Text="Number of die rolls"
                
                />
+
+        <!--label #2 -->
         <Entry Grid.Row="1" Grid.Column="1" x:Name="RollsEntry"></Entry>
 
+        <!--button -->
         <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
                 BackgroundColor="Green"
                 TextColor="White"
                 Text="Roll"
                 Clicked="RollDiceButton"
                 />
-
+        <!--label #3 -->
         <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
                Text="Results"
                FontSize="Large"
