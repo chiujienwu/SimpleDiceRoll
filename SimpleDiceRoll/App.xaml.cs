@@ -10,7 +10,7 @@ namespace SimpleDiceRoll
         {
             InitializeComponent();
 
-            MainPage = new ViewToViewBindingPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()
