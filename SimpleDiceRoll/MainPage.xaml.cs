@@ -16,7 +16,7 @@ namespace SimpleDiceRoll
         {
             InitializeComponent();
 
-            //binding by code
+/*            //binding by code
 
             //source object (1) and could be loaded from  serivce
             Die die = new Die
@@ -34,10 +34,10 @@ namespace SimpleDiceRoll
             Binding dieRollsBinding = new Binding();
             dieRollsBinding.Source = die;
             dieRollsBinding.Path = "Rolls";
-            RollsEntry.SetBinding(Entry.TextProperty, dieRollsBinding);
+            RollsEntry.SetBinding(Entry.TextProperty, dieRollsBinding);*/
 
-            // TODO:  NEED METHOD FOR CREATING ROLL RESULTS AND BIND TO VIEW THE RESULTS OF ROLLS
-            DisplayAlert("Binding Set", "Die sides = " + die.Sides + ", Num of rolls = " + die.Rolls, "OK");
+            //TODO:  NEED METHOD FOR CREATING ROLL RESULTS AND BIND TO VIEW THE RESULTS OF ROLLS
+            //DisplayAlert("Binding Set", "Die sides = " + die.Sides + ", Num of rolls = " + die.Rolls, "OK");
         }
 
         public void RollDiceButton(object sender, EventArgs e)

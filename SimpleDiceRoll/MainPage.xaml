@@ -1,7 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SimpleDiceRoll"
+             xmlns:model="clr-namespace:SimpleDiceRoll.Model"
              x:Class="SimpleDiceRoll.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <model:Die Sides="6" Rolls="3" x:Key="SixSidedDie"></model:Die>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
     <Grid Margin="20, 50, 20, 10">
         <Grid.RowDefinitions>
@@ -17,12 +24,14 @@
 
         <!--label #1 -->
         <Label Grid.Row="0" Grid.Column="0"
-               Text="Number of die sides"
+               Text="Number of die sides: "
                FontAttributes="Bold"
                />
 
         <!--entry #1 -->
-        <Entry Grid.Row="0" Grid.Column="1" x:Name="SidesEntry"/>
+        <Entry Grid.Row="0" Grid.Column="1" x:Name="SidesEntry"
+               Text="{Binding Sides, Source={StaticResource SixSidedDie}}"
+               />
 
         <!--<Label Grid.Row="0" Grid.Column="1" Text="{Binding Value}"
                BindingContext="{x:Reference Name=SidesSlider}"></Label>
@@ -32,12 +41,14 @@
 
         <!--label #2 -->
         <Label Grid.Row="1" Grid.Column="0"
-               Text="Number of die rolls"
-               
+               Text="Number of die rolls: "
+               FontAttributes="Bold"
                />
 
         <!--label #2 -->
-        <Entry Grid.Row="1" Grid.Column="1" x:Name="RollsEntry"></Entry>
+        <Entry Grid.Row="1" Grid.Column="1" x:Name="RollsEntry"
+               Text="{Binding Rolls, Source={StaticResource SixSidedDie}}"
+               />
 
         <!--button -->
         <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
