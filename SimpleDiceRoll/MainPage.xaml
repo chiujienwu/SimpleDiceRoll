@@ -33,12 +33,6 @@
                Text="{Binding Sides}"
                />
 
-        <!--<Label Grid.Row="0" Grid.Column="1" Text="{Binding Value}"
-               BindingContext="{x:Reference Name=SidesSlider}"></Label>
-        <Slider Grid.Row="1" x:Name="SidesSlider" Grid.ColumnSpan="2"
-                Minimum="0" Maximum="20"
-                Value="0"></Slider>-->
-
         <!--label #2 -->
         <Label Grid.Row="1" Grid.Column="0"
                Text="Number of die rolls: "
