@@ -11,7 +11,8 @@ namespace SimpleDiceRoll
 {
     public partial class MainPage : ContentPage
     {
-        List<Die> results = new List<Die>();
+        List<int> results;
+        Die die = new Die();
 
         public MainPage()
         {
@@ -20,7 +21,7 @@ namespace SimpleDiceRoll
             //binding by code
 
             //source object (1) and could be loaded from service call or a database call
-            Die die = new Die
+            die = new Die
             {
                 Sides = 6,
                 Rolls = 3
@@ -45,9 +46,16 @@ namespace SimpleDiceRoll
         }
 
         public void RollDiceButton(object sender, EventArgs e)
-        {            
-            Random rnd = new Random();
-            
+        {
+            results = new List<int>();
+            Random random = new Random();
+            for (var i = 1; i <= die.Rolls; i++)
+            {
+                int randomInt = random.Next(1, die.Sides+1);
+                results.Add(randomInt);
+            }
+
+            RollsResults.Text = "Resulting rolls: " + string.Join(",", results.ToArray());
         }
     }
 }

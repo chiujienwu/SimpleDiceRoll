@@ -15,7 +15,7 @@
             <RowDefinition Height="50"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100"></ColumnDefinition>
@@ -30,7 +30,8 @@
 
         <!--entry #1 -->
         <Entry Grid.Row="0" Grid.Column="1" x:Name="SidesEntry"
-               Text="{Binding Sides}"
+               Keyboard="Numeric"
+               Text="{Binding Sides, Mode=TwoWay}"
                />
 
         <!--label #2 -->
@@ -41,7 +42,8 @@
 
         <!--label #2 -->
         <Entry Grid.Row="1" Grid.Column="1" x:Name="RollsEntry"
-               Text="{Binding Rolls}"
+               Keyboard="Numeric"
+               Text="{Binding Rolls, Mode=TwoWay}"
                />
 
         <!--button -->
@@ -53,12 +55,12 @@
                 />
         <!--label #3 -->
         <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+               x:Name="RollsResults"
                Text="Results"
                FontSize="Large"
                HorizontalOptions="CenterAndExpand"
                HorizontalTextAlignment="Center"
                VerticalOptions="CenterAndExpand"
-               VerticalTextAlignment="Center"
                FontAttributes="Bold"               
                
                />
